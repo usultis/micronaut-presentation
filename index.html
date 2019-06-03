@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/reveal.css">
-    <link rel="stylesheet" href="css/theme/black.css">
+    <link rel="stylesheet" href="css/theme/solarized.css">
 
     <!-- Theme used for syntax highlighting of code -->
     <link rel="stylesheet" href="lib/css/monokai.css">
@@ -34,14 +34,15 @@
         </section>
         <section>
             <h1>About me</h1>
-            <img  width="20%" data-src="images/logo.png" alt="Logo">
+            <img width="20%" data-src="images/logo.png" alt="Logo">
             <h3>Fox Heap</h3>
         </section>
         <section>
             <h1>Agenda</h1>
             <ul>
+                <li>Problem</li>
+                <li>Solution</li>
                 <li>Theory</li>
-                <li>Practice</li>
                 <li>Comparison</li>
                 <li>Benchmarks and other lies</li>
                 <li>QA</li>
@@ -52,11 +53,126 @@
             <small>Oracle Code One 2018</small>
         </section>
         <section>
+            <h1>Why? </h1>
+            <h3>a lot happens in runtime</h3>
+            <ul>
+                <li>Read the byte code of every bean it finds</li>
+                <li>Synthesize new annotations</li>
+                <li>Build Reflective Metadata</li>
+            </ul>
+            <aside class="notes">
+                — Reads the byte code of every bean it finds
+                — Synthesizes new annotations for each annotation on
+                each bean method, constructor, field etc. to support
+                Annotation metadata
+                — Builds Reflective Metadata for each bean for every
+                method, constructor, field etc.
+                time and space
+            </aside>
+        </section>
+        <section>
+            <section>
+                <h1>What can you do?</h1>
+            </section>
+            <section>
+                <h2>buy a bigger mac</h2>
+                <img data-src="images/macbook.png" alt="frameworks">
+            </section>
+            <section>
+                don't worry, pay more
+            </section>
+            <section>
+                <h2>buy Amazon shares</h2>
+                <img data-src="images/amazon-shares.png" alt="frameworks">
+            </section>
+            <section>do less</section>
+        </section>
+        <section>
             <img data-src="images/frameworks.png" alt="frameworks">
             <small>Oracle Code One 2018</small>
         </section>
         <section>
+            <h1>Solution - potential</h1>
+            <ul>
+                <li>Ahead of time compilation</li>
+                <li>Google Dagger 2.x</li>
+            </ul>
+            <aside class="notes">
+                — Google Dagger 2.x
+                — Compile Time Dependency Injector
+                — Reflection Free
+                — Limited in Scope to just DI
+            </aside>
+        </section>
+        <section>
+            <h1>Java server world</h1>
+        </section>
+        <section>
+            <img data-src="images/micronaut-logo.png" alt="status">
+
+        </section>
+        <section>
+            <h1>Goal</h1>
+            <ul>
+                <li>Create a New Framework designed from the groundup for Microservices and Serverless Computing</li>
+                <li>Blazing fast startup time</li>
+                <li>Low Memory Footprint</li>
+                <li>As Small As Possible JAR Sizes</li>
+                <li>Zero Dependency</li>
+                <li>12 Factor - https://12factor.net</li>
+            </ul>
+            <aside class="notes">
+                Resilliant apps, with retries, cirtuit breakers, fast startup, shutdown
+            </aside>
+        </section>
+        <section>
+            <h1>How</h1>
+            <ul>
+                <li>DI during compilation</li>
+                <li>AOP, proxies all processed during compilation</li>
+            </ul>
+            <aside class="notes">
+            </aside>
+        </section>
+
+        <section>
             <img data-src="images/status.png" alt="status">
+        </section>
+        <section>
+            <h1>GraalVM</h1>
+            <ul></ul>
+            <aside class="notes">
+                Twitter 11% less CPU
+                GraalVM is a universal VM mainly for Java and JVM supported languages
+            </aside>
+        </section>
+        <section>
+            <h2>GraalVM Native image</h2>
+            <img data-src="images/graalvm-optimization.png" alt="graalv-opt">
+
+            <aside class="notes">
+
+            </aside>
+        </section>
+        <section>
+            <h2>GraalVM requirements</h2>
+            <ul></ul>
+            <aside class="notes">
+
+            </aside>
+        </section>
+        <section>
+            <h1>Summary</h1>
+            <ul>
+                <li>Micronaut is small and fast</li>
+                <li>has many Spring features</li>
+                <li>allows for a lot of new features</li>
+            </ul>
+            <aside class="notes">
+                small: modular, small output jars, low runtime memory
+                spring features: configuration, DI, etc
+                features: Swagger, optimizations
+            </aside>
         </section>
         <section>
             <h1>Q & A</h1>
