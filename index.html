@@ -43,8 +43,7 @@
             <ul>
                 <li>Problem</li>
                 <li>Solution</li>
-                <li>Theory</li>
-                <li>Comparison</li>
+                <li>API Overview</li>
                 <li>Benchmarks and other lies</li>
                 <li>QA</li>
             </ul>
@@ -108,7 +107,7 @@
                 <li>CPU</li>
                 <li>Network</li>
             </ul>
-            <img data-src="images/speed.jpg" alt="docker">
+            <img style="float: right" width="40%" data-src="images/speed.jpg" alt="speed">
             <aside class="notes">
             </aside>
         </section>
@@ -184,12 +183,40 @@
             </aside>
         </section>
         <section>
+            <h3>How small</h3>
+            <img data-src="images/small.png" alt="small">
+            <aside class="notes">
+            </aside>
+        </section>
+        <section>
             <h1>API</h1>
             <ul>
                 <li>Demo</li>
             </ul>
             <aside class="notes">
+                <pre><code>
                 mn create-app hangar
+                file-watch
+                micronaut:
+                    router:
+                        versioning:
+                            enabled: true
+                    </code></pre>
+            </aside>
+        </section>
+        <section>
+            <h1>API</h1>
+            <ul>
+                <li>Introspection and validation</li>
+            </ul>
+            <aside class="notes">
+                <pre><code>
+                mn create-app hangar
+                micronaut:
+                    router:
+                        versioning:
+                            enabled: true
+                    </code></pre>
             </aside>
         </section>
         <section>
@@ -197,22 +224,33 @@
             <ul>
                 <li>AWS Lambda</li>
             </ul>
-            <aside class="notes">
-                mn create-function name
-            </aside>
+
         </section>
+
         <section>
-            <img data-src="images/status.png" alt="status">
-        </section>
-        <section>
-            <h1>Competition</h1>
+            <h1>Other benefits</h1>
             <ul>
-                <li>Quarkus</li>
-                <li>Helidon</li>
+                <li>Better tooling integration (Jackson)</li>
+                <li>Auto Documentation</li>
+                <li>GraalVM</li>
             </ul>
             <aside class="notes">
-                <p>both follow the same native narrative</p>
-                <p>both support JAX-RS API </p>
+                <a href="https://github.com/FasterXML/jackson-docs/wiki/Presentation:-Jackson-Performance" target="_blank">Jackson Performance</a>
+                <pre><code>
+                annotationProcessor "io.micronaut.configuration:micronaut-openapi"
+                compile "io.swagger.core.v3:swagger-annotations"
+
+                @OpenAPIDefinition(
+                info = @Info(
+                title = "Hello World",
+                version = "0.0",
+                description = "My API",
+                license = @License(name = "Apache 2.0", url = "http://foo.bar"),
+                contact = @Contact(url = "http://gigantic-server.com", name = "Fred", email = "Fred@gigagantic-server.com")
+                )
+                )
+                public class Application {
+                </code></pre>
             </aside>
         </section>
         <section>
@@ -237,8 +275,46 @@
             <h2>GraalVM requirements</h2>
             <ul>plan ahead</ul>
             <aside class="notes">
-                Spring Jersey hk2, dynamic, CGLIB
+                Spring Jersey hk2, dynamic, CGLIB, rabbitmq
             </aside>
+        </section>
+        <section>
+            <h1>Benchmarks</h1>
+            <a href="https://piotrminkowski.wordpress.com/2019/04/09/performance-comparison-between-spring-boot-and-micronaut/" target="_blank">Benchmark</a>
+        </section>
+        <section>
+            <h1>Our results</h1>
+            <ul>
+                <li>Project size - medium - ~ 300 classes with logic</li>
+                <li>Jar size - 150MB -> 42MB</li>
+                <li>Startup - 8s - 2s </li>
+            </ul>
+        </section>
+        <section>
+            <h1>Our issues</h1>
+            <ul>
+                <li>HTTP status 499 </li>
+            </ul>
+        </section>
+        <section>
+            <h1>Our issues</h1>
+            <ul>
+                <img data-src="images/httpstatus-499.png" alt="graalv-opt">
+            </ul>
+        </section>
+        <section>
+            <h1>Competition</h1>
+            <ul>
+                <li>Quarkus</li>
+                <li>Helidon</li>
+            </ul>
+            <aside class="notes">
+                <p>both follow the same native narrative</p>
+                <p>both support JAX-RS API </p>
+            </aside>
+        </section>
+        <section>
+            <img data-src="images/status.png" alt="status">
         </section>
         <section>
             <h2>Future looks bright</h2>
