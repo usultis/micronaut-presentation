@@ -21,6 +21,13 @@
         link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
         document.getElementsByTagName('head')[0].appendChild(link);
     </script>
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
 </head>
 <body>
 <div class="reveal">
@@ -114,6 +121,7 @@
         <section>
             <h2>Cloud cost</h2>
             <img data-src="images/aws-cost.jpg" alt="docker">
+            <small>https://en.wikipedia.org/wiki/Amazon_Elastic_Compute_Cloud</small>
             <aside class="notes">
             </aside>
         </section>
@@ -135,7 +143,7 @@
             <section>do less</section>
         </section>
         <section>
-            <img data-src="images/frameworks.png" alt="frameworks">
+            <img width="80%" data-src="images/frameworks.png" alt="frameworks">
             <small>Oracle Code One 2018</small>
         </section>
         <section>
@@ -155,7 +163,7 @@
             <h1>Java server world</h1>
         </section>
         <section>
-            <img data-src="images/micronaut-logo.png" alt="status">
+            <img width="70%" data-src="images/micronaut-logo.png" alt="status">
 
         </section>
         <section>
@@ -185,6 +193,7 @@
         <section>
             <h3>How small</h3>
             <img data-src="images/small.png" alt="small">
+            <small>Oracle Code One 2018</small>
             <aside class="notes">
             </aside>
         </section>
@@ -247,11 +256,11 @@
             </aside>
         </section>
         <section>
-            <h2>GraalVM Native image</h2>
-            <ul>20ms startup with 18MB consumption</ul>
+            <h3>GraalVM Native image</h3>
+            <p>20ms startup with 18MB consumption</p>
 
-            <img data-src="images/graalvm-optimization.png" alt="graalv-opt">
-
+            <img width="50%" data-src="images/graalvm-optimization.png" alt="graalv-opt">
+<small>https://medium.com/graalvm/lightweight-cloud-native-java-applications-35d56bc45673</small>
             <aside class="notes">
 
             </aside>
@@ -303,12 +312,13 @@
         </section>
         <section>
             <h2>Future looks bright</h2>
-            <img data-src="images/buzz.jpg" alt="graalv-opt">
-
-            <ul>ORM</ul>
-            <ul>reflection validation-api</ul>
-            <ul>OAuth2</ul>
-            <ul>JMS</ul>
+            <img width="40%" data-src="images/buzz.jpg" alt="graalv-opt">
+<ul>
+            <li>ORM</li>
+            <li>reflection-free validation-api</li>
+            <li>OAuth2<li/>
+            <li>JMS</li>
+</ul>
             <aside class="notes">
                 hibernate validation 3MB (reflective
             </aside>
